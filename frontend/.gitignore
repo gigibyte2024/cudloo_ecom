@@ -1,0 +1,31 @@
+# Node
+node_modules/
+dist/
+build/
+
+# OS
+.DS_Store
+
+# Env
+.env
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+
+# Ignore everything outside project
+Downloads/
+Movies/
+Music/
+Pictures/
+Library/
+
+# Media files
+*.mp4
+*.mov
+*.zip
+*.pdf
+*.dmg
+*.jpg
+*.jpeg
+*.png

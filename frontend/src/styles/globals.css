@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =====================
+   Global Base Styles
+===================== */
+
+html,
+body {
+  @apply bg-background-light text-[#1b0d11] antialiased;
+}
+
+/* =====================
+   Glassmorphism Panel
+===================== */
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/* =====================
+   Floating Animations
+===================== */
+
+/* Simple float (badges, pills, small UI elements) */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Tilted float (hero product image) */
+@keyframes float-tilt {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(-2deg);
+  }
+}
+
+.animate-float-tilt {
+  animation: float-tilt 7s ease-in-out infinite;
+}
+
+/* =====================
+   Fade + Stagger Animation
+   (Collection Cards)
+===================== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeUp {
+  animation: fadeUp 0.7s ease-out forwards;
+  opacity: 0;
+}
+
+/* =====================
+   Utility Enhancements
+===================== */
+
+/* Hide scrollbar (horizontal sliders, mobile carousel) */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
