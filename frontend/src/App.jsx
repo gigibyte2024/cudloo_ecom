@@ -96,7 +96,7 @@
 //         </div>
 //       </section>
 
-import logo from "./assets/logo.png";
+import logo from "./assets/Logo.png";
 import babyImg from "./assets/baby.png";
 import productImg from "./assets/towel.png";
 import creamImg from "./assets/cream.png";
