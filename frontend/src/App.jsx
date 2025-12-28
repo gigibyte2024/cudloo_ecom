@@ -103,6 +103,8 @@ import creamImg from "./assets/cream.png";
 import lotionImg from "./assets/lotion.png";
 import oilImg from "./assets/oil.png";
 import shampooImg from "./assets/shampoo.png";
+import heroImg from "./assets/hero-mother-baby.png";
+
 
 
 export default function App() {
@@ -176,20 +178,20 @@ export default function App() {
 
               {/* IMAGE WITH TILT + FLOAT */}
               <div
-                className="
-                  w-full aspect-square rounded-3xl
-                  bg-cover bg-center
-                  shadow-[0_30px_80px_rgba(0,0,0,0.12)]
-                  transform rotate-[-3deg]
-                  animate-float-tilt
-                  transition-all duration-700 ease-out
-                  hover:rotate-0 hover:-translate-y-3
-                "
-                style={{
-                  backgroundImage:
-                    "url('https://lh3.googleusercontent.com/aida-public/AB6AXuD8WeYeTi10bqKuSmCbYdyFSNFsAq4ThvR94wGmTx9icvVZQ6Mq5g88s0h63X0_E0h0jk3pkBeb39Gkh3GqdP8QjJL7BzR_Z1l8f95LiKpwfx2TciGOcOroQihijOvkkP-ibQe9dE9_rKDZuUGMWwY_Lnkw4T1_bSJW1ntuV6KJu0t7pmyCHurc1MCbUtLkxPKi9sBl-lyZvRe2_BZ7PIyHAPOA64QsDvV9ObWv3qUJouP7lGNpsLBB7kH4_TeDFzU7KG9xCQtKZd_8')",
-                }}
-              />
+  className="
+    w-full aspect-square rounded-3xl
+    bg-cover bg-center
+    shadow-[0_30px_80px_rgba(0,0,0,0.12)]
+    transform rotate-[-3deg]
+    animate-float-tilt
+    transition-all duration-700 ease-out
+    hover:rotate-0 hover:-translate-y-3
+  "
+  style={{
+    backgroundImage: `url(${heroImg})`,
+  }}
+/>
+
 
               {/* pH Balanced */}
               <div className="absolute -top-4 -right-4 bg-white rounded-full shadow-lg px-4 py-2 flex items-center gap-2">
