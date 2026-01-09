@@ -97,6 +97,8 @@
 //       </section>
 
 import logo from "./assets/logo.png";
+import { Link } from "react-router-dom";
+
 
 import babyImg from "./assets/baby.png";
 import productImg from "./assets/towel.png";
@@ -126,14 +128,21 @@ export default function App() {
             {/* Links */}
             <div className="hidden md:flex items-center gap-8">
               <a href="#philosophy" className="text-sm text-gray-600 hover:text-primary">Philosophy</a>
-              <a href="#collection" className="text-sm text-gray-600 hover:text-primary">Collection</a>
+              <Link to="/catalog" className="text-sm text-gray-600 hover:text-primary">
+  Collection
+</Link>
+
               <a href="#safety" className="text-sm text-gray-600 hover:text-primary">Safety</a>
             </div>
 
             {/* CTA */}
-            <button className="hidden sm:block bg-primary text-white text-xs font-bold px-6 py-3 rounded-full">
-              Notify Me
-            </button>
+            <Link
+  to="/catalog"
+  className="hidden sm:block bg-primary text-white text-xs font-bold px-6 py-3 rounded-full"
+>
+  Shop Now
+</Link>
+
 
           </div>
         </div>
@@ -151,7 +160,7 @@ export default function App() {
               <div className="glass-panel inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-8">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                 <span className="text-xs font-semibold uppercase tracking-widest text-gray-500">
-                  Launching Soon
+                Now Available
                 </span>
               </div>
 
@@ -165,13 +174,14 @@ export default function App() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-[#1b0d11] text-white px-8 py-4 rounded-full hover:bg-primary transition">
-                  Join Waitlist
-                </button>
-                <button className="bg-white border px-8 py-4 rounded-full">
-                  View Collection
-                </button>
-              </div>
+  <Link to="/catalog" className="bg-[#1b0d11] text-white px-8 py-4 rounded-full hover:bg-primary transition">
+    Shop Collection
+  </Link>
+  <Link to="/catalog" className="bg-white border px-8 py-4 rounded-full">
+    Explore Essentials
+  </Link>
+</div>
+
             </div>
 
             {/* Hero Image + Floating Badges */}
@@ -314,7 +324,7 @@ export default function App() {
     {/* Heading */}
     <div className="mb-12">
       <h2 className="text-3xl font-light">
-        The Coming Soon Collection
+      Featured Essentials
       </h2>
       <p className="text-gray-500 mt-2">
         Gentle essentials for your daily routine.
@@ -378,7 +388,7 @@ export default function App() {
                 px-3 py-1 rounded-full shadow
               "
             >
-              COMING SOON
+           BESTSELLER
             </span>
 
             {/* Product Image */}
@@ -483,8 +493,9 @@ export default function App() {
     </h2>
 
     <p className="text-gray-600 mb-10 leading-relaxed">
-      Join our exclusive list to receive early access to the collection
-      and a special launch gift.
+    Join our list to receive product updates, care guides,
+and exclusive offers.
+
     </p>
 
     {/* Email Input */}
