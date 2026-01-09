@@ -1,11 +1,13 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "./Home";
+import Catalog from "./Catalog";
+
 
 export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      {/* catalog route will go here later */}
+      <Route path="/catalog" element={<Catalog />} />
     </Routes>
   );
 }
