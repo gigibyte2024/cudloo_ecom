@@ -135,3 +135,18 @@ body {
     radial-gradient(circle at bottom left, #fff9f0 0%, transparent 55%),
     linear-gradient(180deg, #fdfcfb, #f6f7f8);
 }
+
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.gradient-bg {
+  background: linear-gradient(45deg, #fcfaf8, #f3ece7, #fdf4ed, #fcfaf8);
+}
+
+.primary-glow {
+  box-shadow: 0 0 20px rgba(232, 125, 48, 0.3);
+}
