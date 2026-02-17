@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 export default function Catalog() {
+  const navigate = useNavigate();
   return (
     <div className="bg-background-light font-display text-slate-900 min-h-screen pastel-gradient">
       {/* ================= HEADER SPACER (NAV OFFSET) ================= */}
@@ -47,6 +49,7 @@ export default function Catalog() {
         <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-32">
           {PRODUCTS.map((p, i) => (
             <motion.div
+             onClick={() => navigate(`/product/${p.title}`)}
               key={p.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
