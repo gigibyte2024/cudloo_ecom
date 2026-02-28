@@ -1,14 +1,12 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-// import toast from "react-hot-toast";
+
 import { useContext } from "react";
 import { CartContext } from "./context/CartContext";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import BackButton from "./components/BackButton";
-// const addToCart = () => {
-//   toast.success("Added to cart successfully!");
-// };
+
 
 export default function ProductDetail() {
   const [qty, setQty] = useState(1);
@@ -93,7 +91,7 @@ export default function ProductDetail() {
             <button
   onClick={() => {
     addToCart({ name: "Baby Oil", price, qty });
-    // toast.success("Added to cart!");
+
   }}
   className="w-full h-16 bg-primary text-white font-display text-lg font-bold rounded-full primary-glow hover:scale-[1.02] transition"
 >
