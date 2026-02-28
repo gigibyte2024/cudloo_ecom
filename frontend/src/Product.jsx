@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar";
+import Navbar from "./components/Navbar";
 // const addToCart = () => {
 //   toast.success("Added to cart successfully!");
 // };
