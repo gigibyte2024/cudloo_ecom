@@ -107,46 +107,13 @@ import lotionImg from "./assets/lotion.png";
 import oilImg from "./assets/oil.png";
 import shampooImg from "./assets/shampoo.png";
 import heroImg from "./assets/hero-mother-baby.png";
-
+import Navbar from "./components/Navbar";
 
 
 export default function App() {
   return (
+    <> <Navbar />
     <div className="bg-background-light text-[#1b0d11] font-display antialiased overflow-x-hidden">
-
-      {/* Navbar */}
-      <nav className="fixed top-0 left-0 right-0 z-50">
-        <div className="glass-panel mx-4 mt-4 rounded-full px-6 py-3 max-w-7xl mx-auto shadow-sm">
-          <div className="flex items-center justify-between">
-
-            {/* Logo */}
-            <div className="flex items-center gap-3">
-              <img src={logo} alt="Cudloo logo" className="w-8 h-8 object-contain" />
-              <span className="text-xl font-bold tracking-[0.1em]">CUDLOO</span>
-            </div>
-
-            {/* Links */}
-            <div className="hidden md:flex items-center gap-8">
-              <a href="#philosophy" className="text-sm text-gray-600 hover:text-primary">Philosophy</a>
-              <Link to="/catalog" className="text-sm text-gray-600 hover:text-primary">
-  Collection
-</Link>
-
-              <a href="#safety" className="text-sm text-gray-600 hover:text-primary">Safety</a>
-            </div>
-
-            {/* CTA */}
-            <Link
-  to="/catalog"
-  className="hidden sm:block bg-primary text-white text-xs font-bold px-6 py-3 rounded-full"
->
-  Shop Now
-</Link>
-
-
-          </div>
-        </div>
-      </nav>
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-24 px-4 overflow-hidden">
@@ -556,5 +523,6 @@ and exclusive offers.
 
 
     </div>
+    </>
   );
 }

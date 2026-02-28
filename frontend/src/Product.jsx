@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
-
+import Navbar from "../components/Navbar";
 // const addToCart = () => {
 //   toast.success("Added to cart successfully!");
 // };
@@ -14,43 +14,14 @@ export default function ProductDetail() {
   const [activeTab, setActiveTab] = useState("ingredients");
   const { addToCart } = useContext(CartContext);
   const navigate = useNavigate();
-  const price = 48;
+  const price = 1499;
 
   const increase = () => setQty(qty + 1);
   const decrease = () => qty > 1 && setQty(qty - 1);
 
   return (
     <div className="relative min-h-screen w-full gradient-bg overflow-x-hidden font-sans text-[#1b130e]">
-
-      {/* NAVIGATION */}
-      <header className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-10 py-6 border-b border-primary/10 glass-panel">
-        <div className="flex items-center gap-8">
-          <h2 className="text-xl font-display font-bold tracking-tight">
-            CUDLOO
-          </h2>
-
-          <nav className="hidden lg:flex items-center gap-10">
-            <span className="text-sm font-medium hover:text-primary cursor-pointer">
-              Shop
-            </span>
-            <span className="text-sm font-medium hover:text-primary cursor-pointer">
-              Philosophy
-            </span>
-            <span className="text-sm font-medium hover:text-primary cursor-pointer">
-              Safety
-            </span>
-            <span className="text-sm font-medium hover:text-primary cursor-pointer">
-              Journal
-            </span>
-          </nav>
-        </div>
-
-        <div className="flex items-center gap-6">
-          <span className="material-symbols-outlined">search</span>
-          <span className="material-symbols-outlined">shopping_bag</span>
-          <span className="material-symbols-outlined">person</span>
-        </div>
-      </header>
+      <Navbar />
 
       <main className="flex flex-col lg:flex-row min-h-screen pt-24">
 
@@ -78,7 +49,7 @@ export default function ProductDetail() {
           <div className="max-w-[540px] w-full flex flex-col gap-10">
 
           <button
-  onClick={() => navigate(-1)}
+  onClick={() => navigate("/Catalog")}
   className="text-sm text-primary underline"
 >
   ← Back to Collection
@@ -125,8 +96,15 @@ export default function ProductDetail() {
   }}
   className="w-full h-16 bg-primary text-white font-display text-lg font-bold rounded-full primary-glow hover:scale-[1.02] transition"
 >
-  Pre-order Now — ${price * qty}
+  Pre-order Now —  ₹{price * qty}
 </button>
+<p className="text-sm text-gray-500 mt-2">
+  Ships within 2–3 business days.
+</p>
+
+<p className="text-sm text-gray-500">
+  Free returns within 7 days.
+</p>
 
             {/* TABS */}
             <div className="flex flex-col gap-4">
@@ -177,7 +155,7 @@ export default function ProductDetail() {
 
       {/* WATERMARK */}
       <div className="fixed bottom-10 left-10 pointer-events-none">
-        <div className="text-[#1b130e]/10 text-9xl font-display font-black">
+        <div className="text-[#1b130e]/10 text-6xl font-display font-black">
           CUDLOO
         </div>
       </div>
