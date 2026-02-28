@@ -5,7 +5,7 @@ import App from "./App";
 import "./styles/globals.css";
 import { CartProvider } from "./context/CartContext";
 
-import { Toaster } from "react-hot-toast";
+// import { Toaster } from "react-hot-toast";
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <CartProvider>
       <BrowserRouter>
         <App />
-        <Toaster position="top-right" />
+        {/* <Toaster position="top-right" /> */}
       </BrowserRouter>
     </CartProvider>
   </React.StrictMode>

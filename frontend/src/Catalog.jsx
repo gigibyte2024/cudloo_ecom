@@ -1,12 +1,15 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-
+import BackButton from "./components/BackButton";
 export default function Catalog() {
   const navigate = useNavigate();
   return (
+    
     <div className="bg-background-light font-display text-slate-900 min-h-screen pastel-gradient">
+      <BackButton />
       {/* ================= HEADER SPACER (NAV OFFSET) ================= */}
       <div className="h-32" />
+
 
       {/* ================= HERO ================= */}
       <main className="px-10 max-w-[1440px] mx-auto w-full flex-1">

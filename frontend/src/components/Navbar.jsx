@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import logo from "../assets/logo.png"; // adjust path if needed
 
+
 export default function Navbar() {
   const { cart } = useContext(CartContext);
 
@@ -12,12 +13,17 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
 
           {/* Logo */}
-          <div className="flex items-center gap-3">
-            <img src={logo} alt="Cudloo logo" className="w-8 h-8 object-contain" />
-            <span className="text-xl font-bold tracking-[0.1em]">
-              CUDLOO
-            </span>
-          </div>
+{/* Logo */}
+<Link to="/" className="flex items-center gap-3">
+  <img
+    src={logo}
+    alt="Cudloo logo"
+    className="w-8 h-8 object-contain"
+  />
+  <span className="text-xl font-bold tracking-[0.1em]">
+    CUDLOO
+  </span>
+</Link>
 
           {/* Links */}
           <div className="hidden md:flex items-center gap-8">

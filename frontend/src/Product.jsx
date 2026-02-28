@@ -2,9 +2,10 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
 import { useContext } from "react";
-import { CartContext } from "../context/CartContext";
+import { CartContext } from "./context/CartContext";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import BackButton from "./components/BackButton";
 // const addToCart = () => {
 //   toast.success("Added to cart successfully!");
 // };
@@ -12,7 +13,7 @@ import Navbar from "./components/Navbar";
 export default function ProductDetail() {
   const [qty, setQty] = useState(1);
   const [activeTab, setActiveTab] = useState("ingredients");
-  const { addToCart } = useContext(CartContext);
+  // const { addToCart } = useContext(CartContext);
   const navigate = useNavigate();
   const price = 1499;
 
@@ -22,7 +23,7 @@ export default function ProductDetail() {
   return (
     <div className="relative min-h-screen w-full gradient-bg overflow-x-hidden font-sans text-[#1b130e]">
       <Navbar />
-
+      <BackButton />
       <main className="flex flex-col lg:flex-row min-h-screen pt-24">
 
         {/* LEFT IMAGE */}
@@ -49,7 +50,7 @@ export default function ProductDetail() {
           <div className="max-w-[540px] w-full flex flex-col gap-10">
 
           <button
-  onClick={() => navigate("/Catalog")}
+  onClick={() => navigate("/catalog")}
   className="text-sm text-primary underline"
 >
   ← Back to Collection
